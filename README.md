@@ -32,7 +32,8 @@ The distinction is explicit in the data, not buried in branching code.
 
 ### 3. Input handling
 
-- `ui_accept` (Enter / Space / **gamepad South**) or mouse click → advance one screen - `ui_cancel` (Escape / **gamepad East**) → skip the whole sequence immediately
+- `ui_accept` (Enter / Space / **gamepad South**) or mouse click → advance one screen
+- `ui_cancel` (Escape / **gamepad East**) → skip the whole sequence immediately
 
 Both actions use Godot's built-in input map, which already includes the standard gamepad buttons — no extra input setup needed. The end screen button grabs focus automatically on `_ready()`, so a controller player can quit without touching the keyboard.
 

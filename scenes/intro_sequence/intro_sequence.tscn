@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx2xa0aaacbu1"]
+
+[ext_resource type="Script" uid="uid://c32ph44uihniw" path="res://scenes/intro_sequence/intro_sequence.gd" id="1_script"]
+
+[node name="IntroSequence" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101961, 0.0705882, 0.156863, 1)
+
+[node name="Content" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LayoutLogo" type="TextureRect" parent="Content"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -268.5
+offset_right = 460.0
+offset_bottom = 268.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LayoutTextBox" type="VBoxContainer" parent="Content"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -525.0
+offset_top = -270.0
+offset_right = 525.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="TextIcon" type="TextureRect" parent="Content/LayoutTextBox"]
+visible = false
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextBody" type="Label" parent="Content/LayoutTextBox"]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 34
+text = "Placeholder"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

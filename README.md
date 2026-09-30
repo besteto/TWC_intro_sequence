@@ -1,8 +1,12 @@
 # Godot Intro Sequence — Data-Driven Screen Sequencer
+![Godot Engine](https://img.shields.io/badge/godotengine-%23478CBF.svg?style=for-the-badge&logo=godotengine&logoColor=white)
+![Itch.io](https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 
 A minimal Godot 4 demo showing how to replace an if/else intro chain with a data array. The entire sequence — logos, text screens, localized strings — is driven by a single `_SCREENS` const. Adding or reordering screens requires no code changes.
 
 Extracted from [**Dopros**](https://store.steampowered.com/app/4348260/DOPROS/) by [The Witches Circle](https://thewitchescircle.games/).
+Live demo at [**itch.io**](https://besteto.itch.io/twc-godot-intro-sequence).
 
 ---
 
